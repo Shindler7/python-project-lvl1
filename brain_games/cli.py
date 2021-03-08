@@ -1,15 +1,12 @@
-#!/usr/bin/env python
-
 """
 Вспомогательный модуль учебного проекта.
 """
 import prompt
 
 
-def welcome_user():
+def welcome_user() -> str:
     """
     Приветствие пользователя.
     """
 
-    name = prompt.string('May I have your name? ')
-    print(f'Hello, {name}!')
+    return prompt.string('May I have your name? ')

@@ -3,7 +3,8 @@
 """
 Учебный основной модуль.
 """
-from brain_games.cli import welcome_user
+from .brain_even import main as main_even
+from brain_games import cli
 
 
 def main():
@@ -13,7 +14,10 @@ def main():
 
     print('Welcome to the Brain Games!')
 
-    welcome_user()
+    name = cli.welcome_user()
+    print(f'Hello, {name}!')
+
+    main_even(name)
 
 
 if __name__ == '__main__':
